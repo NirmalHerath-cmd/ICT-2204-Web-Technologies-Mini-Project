@@ -1,0 +1,144 @@
+/* GLOBAL STYLING */
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.section-title {
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* HERO SECTION */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-section img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero-section h1 {
+    font-size: 60px;
+}
+
+.hero-section p {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* NAVBAR */
+.navbar {
+    transition: 0.4s;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0,0,0,0.9) !important;
+}
+
+/* SECTION SPACING */
+section {
+    padding: 80px 0;
+}
+
+/* IMAGE HOVER EFFECT */
+.image-hover {
+    overflow: hidden;
+}
+
+.image-hover img {
+    transition: transform 0.5s ease;
+}
+
+.image-hover:hover img {
+    transform: scale(1.1);
+}
+
+/* BUTTON STYLE */
+.btn-primary {
+    background-color: #ff7b00;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #e96a00;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: #ccc;
+    padding: 40px 0;
+}
+
+/* Custom Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Hero Section with Fixed Background */
+.hero-section {
+    min-height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 80px; /* Offset for fixed navbar */
+}
+
+/* Experience Cards Styling */
+.experience-card {
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+    background: #f8f9fa;
+    border-color: #0d6efd !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Section Headings */
+h2 {
+    color: #222;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #0d6efd;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Custom Primary Button */
+.btn-primary {
+    padding: 10px 25px;
+    font-weight: 500;
+}

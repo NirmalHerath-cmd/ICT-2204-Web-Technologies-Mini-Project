@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Places | Travel Planner</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .place-card {
+            transition: all 0.3s ease;
+            border: none;
+            overflow: hidden;
+            height: 100%;
+        }
+        .place-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+        }
+        .place-img-container {
+            height: 250px;
+            overflow: hidden;
+        }
+        .place-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .place-card:hover img {
+            transform: scale(1.1);
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #0d6efd;
+        }
+
+        /* Search Bar Styling */
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 50px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .search-box input {
+            border: none;
+            padding: 15px 25px;
+        }
+        .search-box .input-group-text {
+            background: white;
+            border: none;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Travel<span class="text-primary">Planner</span></a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto text-uppercase small fw-bold">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link active" href="places.html">Places</a></li>
+                <li class="nav-item"><a class="nav-link" href="things-to-do.html">Things To Do</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-3 px-4 py-2" href="plan-trip.html">Plan Trip</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="bg-dark text-white py-5 text-center position-relative" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1500&q=80'); background-size: cover; background-position: center;">
+    <div class="container py-4">
+        <h1 class="display-3 fw-bold">Explore the World</h1>
+        <p class="lead opacity-75">Curated destinations for every type of traveler.</p>
+    </div>
+</section>
+
+<div class="container py-5">
+    
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="input-group search-box">
+                <span class="input-group-text"><i class="bi bi-search text-primary"></i></span>
+                <input type="text" id="categorySearch" class="form-control" placeholder="Search for categories (e.g. 'Beach', 'Hotel', 'History')...">
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mb-5">
+        <h2 class="fw-bold section-title">Categories to Explore</h2>
+    </div>
+
+    <div class="row g-4" id="placesGrid">
+        <div class="col-lg-4 col-md-6 place-item">
+            <div class="card place-card shadow-sm">
+                <div class="place-img-container">
+                    <img src="F:/Rajarata University/ICT 2204/web project 2.0/images/pexels-naimbic-2291624.jpg" alt="Hotels">
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold"><i class="bi bi-building text-primary me-2"></i>Hotels & Dining</h5>
+                    <p class="text-muted small">From luxury stays to local street food gems that define a city's flavor.</p>
+                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#infoModal" data-title="Hotels & Dining" data-desc="Discover elite resorts and top-rated restaurants across the globe.">View More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 place-item">
+            <div class="card place-card shadow-sm">
+                <div class="place-img-container">
+                    <img src="F:/Rajarata University/ICT 2204/web project 2.0/images/pexels-bharatbub-2588296.jpg" alt="History">
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold"><i class="bi bi-bank text-warning me-2"></i>Historical Sites</h5>
+                    <p class="text-muted small">Step back in time to explore ancient ruins and architectural wonders.</p>
+                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#infoModal" data-title="Historical Sites" data-desc="Explore world heritage sites and ancient architecture.">View More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 place-item">
+            <div class="card place-card shadow-sm">
+                <div class="place-img-container">
+                    <img src="F:/Rajarata University/ICT 2204/web project 2.0/images/pexels-taryn-elliott-4253835.jpg" alt="Beaches">
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold"><i class="bi bi-sun text-info me-2"></i>Beaches & Coast</h5>
+                    <p class="text-muted small">Pristine white sands and turquoise waters for ultimate relaxation.</p>
+                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#infoModal" data-title="Beaches & Coast" data-desc="The world's best surfing spots and tropical paradises.">View More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 place-item">
+            <div class="card place-card shadow-sm">
+                <div class="place-img-container">
+                    <img src="F:/Rajarata University/ICT 2204/web project 2.0/images/pexels-andreimike-1271619.jpg" alt="Wildlife">
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold"><i class="bi bi-tree text-success me-2"></i>Wildlife & Adventure</h5>
+                    <p class="text-muted small">Experience the thrill of nature through safaris and jungle treks.</p>
+                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#infoModal" data-title="Wildlife & Adventure" data-desc="Get close to exotic animals in their natural habitats.">View More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 place-item">
+            <div class="card place-card shadow-sm">
+                <div class="place-img-container">
+                    <img src="F:/Rajarata University/ICT 2204/web project 2.0/images/pexels-grisentig-4215104.jpg" alt="Mountains">
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold"><i class="bi bi-mountain text-secondary me-2"></i>Mountain Retreats</h5>
+                    <p class="text-muted small">Breathtaking peaks and misty valleys for the hiking enthusiasts.</p>
+                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#infoModal" data-title="Mountain Retreats" data-desc="Hiking, skiing, and panoramic viewpoints in the clouds.">View More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 place-item">
+            <div class="card place-card shadow-sm">
+                <div class="place-img-container">
+                    <img src="F:/Rajarata University/ICT 2204/web project 2.0/images/pexels-marina-zvada-844583049-35598967.jpg" alt="Culture">
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold"><i class="bi bi-moon-stars text-danger me-2"></i>Spiritual Sites</h5>
+                    <p class="text-muted small">Iconic temples and cathedrals that showcase global spirituality.</p>
+                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#infoModal" data-title="Spiritual Sites" data-desc="A journey through the world's most sacred and peaceful architecture.">View More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="infoModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="modalTitle">Title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="modalDesc">Description goes here...</div>
+            <div class="modal-footer">
+                <a href="plan-trip.html" class="btn btn-primary">Add to Trip</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+        <p class="mb-0">Travel Planner © 2026</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Logic for the info Modal
+    const infoModal = document.getElementById('infoModal');
+    infoModal.addEventListener('show.bs.modal', event => {
+        const button = event.relatedTarget;
+        const title = button.getAttribute('data-title');
+        const desc = button.getAttribute('data-desc');
+        
+        infoModal.querySelector('#modalTitle').textContent = title;
+        infoModal.querySelector('#modalDesc').textContent = desc;
+    });
+
+    // --- SEARCH FILTER LOGIC ---
+    document.getElementById('categorySearch').addEventListener('keyup', function() {
+        let filter = this.value.toLowerCase();
+        let items = document.querySelectorAll('.place-item');
+
+        items.forEach(item => {
+            let title = item.querySelector('h5').innerText.toLowerCase();
+            let description = item.querySelector('p').innerText.toLowerCase();
+            
+            if (title.includes(filter) || description.includes(filter)) {
+                item.style.display = ""; // Show
+            } else {
+                item.style.display = "none"; // Hide
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

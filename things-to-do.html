@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Things To Do | Travel Planner</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .activity-card {
+            transition: all 0.3s ease-in-out;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+        }
+        .activity-img-wrapper {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        .activity-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .category-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .search-banner {
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+            margin-top: -1px;
+        }
+        .price-text {
+            color: #0d6efd;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Travel<span class="text-primary">Planner</span></a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto text-uppercase small fw-bold">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="places.html">Places</a></li>
+                <li class="nav-item"><a class="nav-link active" href="things-to-do.html">Things To Do</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-3 px-4 py-2" href="plan-trip.html">Plan Trip</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="search-banner py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h3 class="fw-bold m-0">Discover Activities</h3>
+            </div>
+            <div class="col-md-6">
+                <div class="input-group shadow-sm">
+                    <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+                    <input type="text" id="activitySearch" class="form-control border-start-0" placeholder="Filter by activity name...">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container py-5">
+    <div class="row g-4" id="activityGrid">
+        
+        <div class="col-lg-4 col-md-6 activity-item">
+            <div class="card activity-card shadow-sm h-100">
+                <div class="activity-img-wrapper">
+                    <span class="category-tag bg-success text-white">Adventure</span>
+                    <img src="F:/Rajarata University/ICT 2204/web project 2.0/images/pexels-lureofadventure-10762371.jpg" alt="Hiking">
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold activity-title">Adventure Hiking</h5>
+                    <p class="text-muted small">Explore scenic mountain trails, waterfalls, and breathtaking viewpoints.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="small text-secondary"><i class="bi bi-clock"></i> 3-5 Hours</span>
+                        <span class="price-text">$25</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 activity-item">
+            <div class="card activity-card shadow-sm h-100">
+                <div class="activity-img-wrapper">
+                    <span class="category-tag bg-info text-dark">Cultural</span>
+                    <img src="F:/Rajarata University/ICT 2204/web project 2.0/images/pexels-loifotos-1660879.jpg" alt="City Tour">
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold activity-title">City Walking Tour</h5>
+                    <p class="text-muted small">Walk through vibrant streets and learn the hidden history of iconic spots.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="small text-secondary"><i class="bi bi-clock"></i> 2 Hours</span>
+                        <span class="price-text">$15</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 activity-item">
+            <div class="card activity-card shadow-sm h-100">
+                <div class="activity-img-wrapper">
+                    <span class="category-tag bg-danger text-white">Foodie</span>
+                    <img src="F:/Rajarata University/ICT 2204/web project 2.0/images/pexels-dominikagregus-702123.jpg" alt="Food Experience">
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold activity-title">Local Street Food Experience</h5>
+                    <p class="text-muted small">Taste authentic local dishes and traditional recipes from street vendors.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="small text-secondary"><i class="bi bi-clock"></i> 3 Hours</span>
+                        <span class="price-text">$40</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 activity-item">
+            <div class="card activity-card shadow-sm h-100">
+                <div class="activity-img-wrapper">
+                    <span class="category-tag bg-primary text-white">Water</span>
+                    <img src="F:/Rajarata University/ICT 2204/web project 2.0/images/pexels-guy-kawasaki-783630-1654492.jpg" alt="Surfing">
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold activity-title">Surfing Lessons</h5>
+                    <p class="text-muted small">Professional coaching for beginners at the most beautiful beaches.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="small text-secondary"><i class="bi bi-clock"></i> 1.5 Hours</span>
+                        <span class="price-text">$55</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 activity-item">
+            <div class="card activity-card shadow-sm h-100">
+                <div class="activity-img-wrapper">
+                    <span class="category-tag bg-warning text-dark">Wildlife</span>
+                    <img src="F:/Rajarata University/ICT 2204/web project 2.0/images/pexels-richard-wilson-1717169-10822358.jpg" alt="Safari">
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold activity-title">Evening Jeep Safari</h5>
+                    <p class="text-muted small">Spot elephants, leopards, and exotic birds in their natural habitat.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="small text-secondary"><i class="bi bi-clock"></i> 4 Hours</span>
+                        <span class="price-text">$70</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+        <p class="mb-2">Travel Planner © 2026</p>
+        
+    </div>
+</footer>
+
+<script>
+    document.getElementById('activitySearch').addEventListener('keyup', function() {
+        let value = this.value.toLowerCase();
+        let items = document.querySelectorAll('.activity-item');
+
+        items.forEach(item => {
+            let title = item.querySelector('.activity-title').innerText.toLowerCase();
+            if (title.includes(value)) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

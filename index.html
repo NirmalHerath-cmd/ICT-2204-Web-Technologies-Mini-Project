@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel Planner | Discover Your Next Journey</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+
+        /* HERO SECTION STYLING */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            color: white;
+        }
+
+        .experience-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: white;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-10px);
+            background: #f0f7ff;
+            border-color: #0d6efd !important;
+        }
+
+        .dest-card img {
+            height: 200px;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .dest-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .dest-card {
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(33, 37, 41, 0.9) !important;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-uppercase" href="index.html">Travel<span class="text-primary">Planner</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link active px-3" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="places.html">Places</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="things-to-do.html">Things To Do</a></li>
+                <li class="nav-item ms-lg-3"><a class="btn btn-primary rounded-pill px-4 shadow-sm" href="plan-trip.html">Plan Your Trip</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <header class="hero-section d-flex align-items-center justify-content-center text-center">
+        <div class="container py-5">
+            <h1 class="display-1 fw-bold mb-3">Adventure Awaits <span class="text-primary">You</span></h1>
+            <p class="lead mb-5 fs-4 opacity-90">Personalized itineraries for the modern explorer.</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <form class="input-group mb-3 shadow-lg rounded-pill overflow-hidden bg-white p-2">
+                        <span class="input-group-text bg-transparent border-0 ps-4"><i class="bi bi-geo-alt text-primary"></i></span>
+                        <input class="form-control border-0 px-2 py-3 shadow-none" type="search" placeholder="Enter a city or activity...">
+                        <button class="btn btn-primary rounded-pill px-5 fw-bold" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container py-5 mt-5">
+        <div class="text-center mb-5">
+            <h6 class="text-primary fw-bold text-uppercase tracking-widest">Choose your vibe</h6>
+            <h2 class="fw-bold display-6">Discover Experiences</h2>
+        </div>
+
+        <div class="row g-4 text-center">
+            <div class="col-md-3">
+                <div class="experience-card p-4 rounded-4 shadow-sm h-100 border-0">
+                    <div class="display-5 mb-3">🌿</div>
+                    <h5 class="fw-bold">Nature</h5>
+                    <p class="small text-muted">Breathtaking landscapes and wild escapes.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="experience-card p-4 rounded-4 shadow-sm h-100 border-0">
+                    <div class="display-5 mb-3">🏛</div>
+                    <h5 class="fw-bold">Heritage</h5>
+                    <p class="small text-muted">Historical wonders and ancient traditions.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="experience-card p-4 rounded-4 shadow-sm h-100 border-0">
+                    <div class="display-5 mb-3">🚴</div>
+                    <h5 class="fw-bold">Adventure</h5>
+                    <p class="small text-muted">Thrilling trails and outdoor challenges.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="experience-card p-4 rounded-4 shadow-sm h-100 border-0">
+                    <div class="display-5 mb-3">🍽</div>
+                    <h5 class="fw-bold">Food</h5>
+                    <p class="small text-muted">Local culinary gems and authentic tastes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+            <div>
+                <h6 class="text-primary fw-bold text-uppercase">Trending</h6>
+                <h2 class="fw-bold">Popular Destinations</h2>
+            </div>
+            <a href="places.html" class="btn btn-outline-primary rounded-pill px-4 mb-2">View All</a>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card dest-card border-0 shadow-sm h-100">
+                    <img src="F:Rajarata University/ICT 2204/web project 2.0/images/pexels-artosuraj-28749617.jpg" class="card-img-top" alt="India">
+                    <div class="card-body">
+                        <h5 class="fw-bold">The Taj Mahal</h5>
+                        <p class="text-muted small mb-0"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Agra, India</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card dest-card border-0 shadow-sm h-100">
+                    <img src="F:/Rajarata University/ICT 2204/web project 2.0/images/pexels-eugene-dorosh-230277-739407.jpg" class="card-img-top" alt="Paris">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Eiffel Tower</h5>
+                        <p class="text-muted small mb-0"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Paris, France</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card dest-card border-0 shadow-sm h-100">
+                    <img src="F:/Rajarata University/ICT 2204/web project 2.0/images/pexels-tomas-malik-793526-3408354.jpg" class="card-img-top" alt="Japan">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Mount Fuji</h5>
+                        <p class="text-muted small mb-0"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Shizuoka, Japan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary text-white py-5 mt-5">
+        <div class="container text-center py-4">
+            <h2 class="fw-bold display-5 mb-3">Ready to Plan Your Dream Trip?</h2>
+            <p class="lead mb-5 opacity-75 mx-auto" style="max-width: 700px;">Join thousands of travelers who organize their schedules effortlessly with our interactive planner.</p>
+            <a href="plan-trip.html" class="btn btn-light btn-lg rounded-pill fw-bold px-5 py-3 shadow">Get Started Now</a>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-dark text-white text-center py-5 mt-auto">
+    <div class="container">
+        <div class="mb-4">
+            <a href="#" class="text-white me-4 fs-4"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-4 fs-4"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white me-4 fs-4"><i class="bi bi-twitter-x"></i></a>
+        </div>
+        <p class="mb-1 opacity-75">Travel Planner © 2026  </p>
+        
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
